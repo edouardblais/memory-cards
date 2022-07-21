@@ -16,28 +16,30 @@ import janja from '../images/janja.jpg'
 
 const Main = () => {
 
-    const images = [ sharma, ondra, caldwell, webb, trotter, megos, williams, hayes, harrington, davis, babsi, janja ];
+    let images = [ sharma, ondra, caldwell, webb, trotter, megos, williams, hayes, harrington, davis, babsi, janja ];
 
-    const randomArray = (array) => {
-        for (let i = (array.length) - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            const temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
+    const  shuffleArray = (array) => {
+        let currentIndex = array.length,  randomIndex;
+      
+        while (currentIndex != 0) {
+      
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+      
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
         }
-    }
+      
+        return array;
+      }
 
-    const [gameboard, setGameboard] = useState(randomArray(images));
+    const [gameboard, setGameboard] = useState(shuffleArray(images));
 
     const shuffleGameboard = () => {
-        setGameboard(randomArray(gameboard));
+        let newgameboard = [...gameboard];
+        let shuffledgameboard = shuffleArray(newgameboard);
+        setGameboard(shuffledgameboard);
     };
-
-    const showGameboard = () => {
-        gameboard.forEach((e) => {
-            return <Image src={e}/>
-        })
-    }
 
     const [score, setScore] = useState(0);
 
@@ -57,7 +59,11 @@ const Main = () => {
         <div>
             <div>Your score is: {score}</div>
             <div>Your best score is: {highscore}</div>
-            {showGameboard}
+            <div>
+                {gameboard?.map((climber, index) => (
+                    <Image key={index} src={climber}/>
+                ))}
+            </div>
             <Button onClick={shuffleGameboard} name='Play Again'/>
         </div>
     )
