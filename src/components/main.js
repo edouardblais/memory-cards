@@ -21,7 +21,7 @@ const Main = () => {
     const  shuffleArray = (array) => {
         let currentIndex = array.length,  randomIndex;
       
-        while (currentIndex != 0) {
+        while (currentIndex !== 0) {
       
           randomIndex = Math.floor(Math.random() * currentIndex);
           currentIndex--;
@@ -35,6 +35,8 @@ const Main = () => {
 
     const [gameboard, setGameboard] = useState(shuffleArray(images));
 
+    const [selectedimages, setSelectedImages] = useState([]);
+
     const shuffleGameboard = () => {
         let newgameboard = [...gameboard];
         let shuffledgameboard = shuffleArray(newgameboard);
@@ -42,12 +44,17 @@ const Main = () => {
     };
 
     const cardChosen = (e) => {
-        if (e.target.name==='free') {
-            setScore(score+1);
-            e.target.name='picked';
-            shuffleGameboard();
-        } else if (e.target.name==='picked') {
+        if (selectedimages.includes(e.target.src)) {
+            console.log(selectedimages);
             setScore(0);
+            setSelectedImages([]);
+            console.log(selectedimages);
+        } else {
+            console.log(selectedimages);
+            setScore(score+1);
+            setSelectedImages(prevState => [...prevState, e.target.src]);
+            shuffleGameboard();
+            console.log(selectedimages);
         }
     }
 
@@ -67,7 +74,7 @@ const Main = () => {
             <div>Your best score is: {highscore}</div>
             <div>
                 {gameboard?.map((climber, index) => (
-                    <Image key={index} src={climber} onClick={(e) => cardChosen(e)} name='free'/>
+                    <Image key={index} src={climber} onClick={(e) => cardChosen(e)}/>
                 ))}
             </div>
             <Button onClick={shuffleGameboard} name='Play Again'/>
