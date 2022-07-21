@@ -41,11 +41,17 @@ const Main = () => {
         setGameboard(shuffledgameboard);
     };
 
-    const [score, setScore] = useState(0);
+    const cardChosen = (e) => {
+        if (e.target.name==='free') {
+            setScore(score+1);
+            e.target.name='picked';
+            shuffleGameboard();
+        } else if (e.target.name==='picked') {
+            setScore(0);
+        }
+    }
 
-    useEffect(() => {
-        setScore(0)
-    }, [gameboard]);
+    const [score, setScore] = useState(0);
 
     const [highscore, setHighscore] = useState(0);
 
@@ -61,7 +67,7 @@ const Main = () => {
             <div>Your best score is: {highscore}</div>
             <div>
                 {gameboard?.map((climber, index) => (
-                    <Image key={index} src={climber}/>
+                    <Image key={index} src={climber} onClick={(e) => cardChosen(e)} name='free'/>
                 ))}
             </div>
             <Button onClick={shuffleGameboard} name='Play Again'/>
