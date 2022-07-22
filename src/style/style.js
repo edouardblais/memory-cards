@@ -4,7 +4,7 @@ const general = {
     backgroundColor: '#18181b',
     display: 'flex',
     flexDirection: 'column',
-    fontSize:'1rem',
+    fontSize:'1vh',
     boxSizing:'border-box',
     margin:'-8px',
     padding:'0',
@@ -30,7 +30,7 @@ const header = {
     alignItems:'center',
     textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
     color:'white',
-    fontSize:'2.5rem',
+    fontSize:'5vh',
     fontWeight:'700',
     height:'5vh',
     padding:'1vh',
@@ -38,12 +38,12 @@ const header = {
 
 const footer = {
     fontStyle:'italic',
-    fontSize:'1rem',
+    fontSize:'2vh',
     justifyContent:'center',
     display:'flex',
     alignItems:'center',
     fontWeight:'bold',
-    height:'2vh',
+    height:'3vh',
     padding:'.5vh'
 }
 
@@ -65,7 +65,7 @@ const image = {
 }
 
 const score = {
-    fontSize:'1.5rem'
+    fontSize:'3vh'
 }
 
 const button = {
@@ -76,6 +76,7 @@ const button = {
     border:'1px solid #f8fafc',
     color:'#f8fafc',
     height:'3vh',
+    fontSize:'2vh',
 }
 
 
