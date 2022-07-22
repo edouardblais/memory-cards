@@ -1,6 +1,6 @@
 # About
 
-Enjoy a memory cards react-based game with a rock climbing flavor!
+Enjoy a react-based memory cards game with a rock climbing flavor!
 
 # Getting Started with Create React App
 

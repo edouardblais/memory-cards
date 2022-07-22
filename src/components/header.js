@@ -1,9 +1,10 @@
 import React from 'react'
+import {style} from '../style/style'
 
 const Header = () => {
     return (
-        <div>
-            <h1>Memory Cards: The Climbing Edition</h1>
+        <div style={style.header}>
+            <div>Memory Cards: The Climbing Edition</div>
         </div>
     )
 }

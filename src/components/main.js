@@ -13,6 +13,7 @@ import harrington from '../images/harrington.jpg'
 import davis from '../images/davis.jpg'
 import babsi from '../images/babsi.jpg'
 import janja from '../images/janja.jpg'
+import {style} from '../style/style'
 
 const Main = () => {
 
@@ -45,16 +46,12 @@ const Main = () => {
 
     const cardChosen = (e) => {
         if (selectedimages.includes(e.target.src)) {
-            console.log(selectedimages);
             setScore(0);
             setSelectedImages([]);
-            console.log(selectedimages);
         } else {
-            console.log(selectedimages);
             setScore(score+1);
             setSelectedImages(prevState => [...prevState, e.target.src]);
             shuffleGameboard();
-            console.log(selectedimages);
         }
     }
 
@@ -68,16 +65,20 @@ const Main = () => {
         }
     }, [score, highscore]);
 
+    const resetScore = () => {
+        setScore(0);
+        shuffleGameboard();
+    }
+
     return (
-        <div>
-            <div>Your score is: {score}</div>
-            <div>Your best score is: {highscore}</div>
-            <div>
+        <div style={style.main}>
+            <div style={style.score}>Current Score: {score} Best Score: {highscore}</div>
+            <Button onClick={resetScore} name='Reset Score'/>
+            <div style={style.imagecontainer}>
                 {gameboard?.map((climber, index) => (
                     <Image key={index} src={climber} onClick={(e) => cardChosen(e)}/>
                 ))}
             </div>
-            <Button onClick={shuffleGameboard} name='Play Again'/>
         </div>
     )
 }
