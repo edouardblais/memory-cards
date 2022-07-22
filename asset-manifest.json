@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/react-gh-pages/static/js/main.3f0c8ccd.js",
-    "static/media/sharma.jpg": "/react-gh-pages/static/media/sharma.0f685b70150bc191138b.jpg",
-    "static/media/trotter.jpg": "/react-gh-pages/static/media/trotter.350a110a29f29323c69b.jpg",
-    "static/media/ondra.jpg": "/react-gh-pages/static/media/ondra.deba881f147aee4b4425.jpg",
-    "static/media/davis.jpg": "/react-gh-pages/static/media/davis.0c1841eb75474b253eda.jpg",
-    "static/media/hayes.jpg": "/react-gh-pages/static/media/hayes.80a0bba5bec89013ff5a.jpg",
-    "static/media/williams.jpg": "/react-gh-pages/static/media/williams.71434616d00e76b126e4.jpg",
-    "static/media/harrington.jpg": "/react-gh-pages/static/media/harrington.d59af008cb3f88ba4eea.jpg",
-    "static/media/babsi.jpg": "/react-gh-pages/static/media/babsi.b2b852d28abec5afb51d.jpg",
-    "static/media/megos.jpg": "/react-gh-pages/static/media/megos.c1000fbefb140f22f42c.jpg",
-    "static/media/webb.jpg": "/react-gh-pages/static/media/webb.fa5bf6ab01b264b84e75.jpg",
-    "static/media/caldwell.jpg": "/react-gh-pages/static/media/caldwell.7557de23b44bc108490e.jpg",
-    "static/media/janja.jpg": "/react-gh-pages/static/media/janja.33c1e38e98d8c404ff73.jpg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.3f0c8ccd.js.map": "/react-gh-pages/static/js/main.3f0c8ccd.js.map"
+    "main.js": "/memory-cards/static/js/main.57377fee.js",
+    "static/media/sharma.jpg": "/memory-cards/static/media/sharma.0f685b70150bc191138b.jpg",
+    "static/media/trotter.jpg": "/memory-cards/static/media/trotter.350a110a29f29323c69b.jpg",
+    "static/media/ondra.jpg": "/memory-cards/static/media/ondra.deba881f147aee4b4425.jpg",
+    "static/media/davis.jpg": "/memory-cards/static/media/davis.0c1841eb75474b253eda.jpg",
+    "static/media/hayes.jpg": "/memory-cards/static/media/hayes.80a0bba5bec89013ff5a.jpg",
+    "static/media/williams.jpg": "/memory-cards/static/media/williams.71434616d00e76b126e4.jpg",
+    "static/media/harrington.jpg": "/memory-cards/static/media/harrington.d59af008cb3f88ba4eea.jpg",
+    "static/media/babsi.jpg": "/memory-cards/static/media/babsi.b2b852d28abec5afb51d.jpg",
+    "static/media/megos.jpg": "/memory-cards/static/media/megos.c1000fbefb140f22f42c.jpg",
+    "static/media/webb.jpg": "/memory-cards/static/media/webb.fa5bf6ab01b264b84e75.jpg",
+    "static/media/caldwell.jpg": "/memory-cards/static/media/caldwell.7557de23b44bc108490e.jpg",
+    "static/media/janja.jpg": "/memory-cards/static/media/janja.33c1e38e98d8c404ff73.jpg",
+    "index.html": "/memory-cards/index.html",
+    "main.57377fee.js.map": "/memory-cards/static/js/main.57377fee.js.map"
   },
   "entrypoints": [
-    "static/js/main.3f0c8ccd.js"
+    "static/js/main.57377fee.js"
   ]
 }
