@@ -2,6 +2,8 @@
 
 Enjoy a react-based memory cards game with a rock climbing flavor!
 
+See it live: https://edouardblais.github.io/memory-cards/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
